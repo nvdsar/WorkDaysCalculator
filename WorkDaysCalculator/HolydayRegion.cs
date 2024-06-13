@@ -1,6 +1,6 @@
 ﻿namespace WorkDaysCalculator
 {
-    public enum HolydayRegion
+    public enum HolidayRegion
     {
         SolarHijri = 0,
         LunarHijri = 1,

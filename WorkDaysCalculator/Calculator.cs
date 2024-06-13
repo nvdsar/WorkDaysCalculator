@@ -13,7 +13,7 @@ namespace WorkDaysCalculator
         CultureInfo PersianCulture = new CultureInfo("fa-Ir");
         CultureInfo ArabicCulture = new CultureInfo("ar-SA");
         CultureInfo AustralianCulture = new CultureInfo("en-au");
-        public List<DateTime> GetWorkDays(DateTime from, DateTime to, params HolydayRegion[] regions)
+        public List<DateTime> GetWorkDays(DateTime from, DateTime to, params HolidayRegion[] regions)
         {
             if (to < from)
                 throw new InvalidDataException();
@@ -25,21 +25,21 @@ namespace WorkDaysCalculator
             do
             {
                 f = f.AddDays(1);
-                if (skip(HolydayRegion.SolarHijri, PersianCulture))
+                if (skip(HolidayRegion.SolarHijri, PersianCulture))
                     continue;
-                if (skip(HolydayRegion.LunarHijri, ArabicCulture))
+                if (skip(HolidayRegion.LunarHijri, ArabicCulture))
                     continue;
-                if (skip(HolydayRegion.Victoria, AustralianCulture))
+                if (skip(HolidayRegion.Victoria, AustralianCulture))
                     continue;
                 overAllDates.Add(f.Date);
 
             } while (f.Date <= to.Date);
 
-            bool skip(HolydayRegion region, CultureInfo culture)
+            bool skip(HolidayRegion region, CultureInfo culture)
             {
                 if (regions.Contains(region))
                 {
-                    return Holydays.Days.Where(x => x.Region == region).Select(x => x.Date.Replace("/", "")).Contains(f.ToString("MMdd", culture));
+                    return Holidays.Days.Where(x => x.Region == region).Select(x => x.Date.Replace("/", "")).Contains(f.ToString("MMdd", culture));
                 }
                 return false;
             }
@@ -49,18 +49,18 @@ namespace WorkDaysCalculator
 
             return workDays;
         }
-        public int GetWorkDaysCount(DateTime from, DateTime to, params HolydayRegion[] regions)
+        public int GetWorkDaysCount(DateTime from, DateTime to, params HolidayRegion[] regions)
         {
             var workDays = GetWorkDays(from, to, regions);
             return workDays.Count;
         }
-        private DayOfWeek[] getWeekendDays(HolydayRegion region)
+        private DayOfWeek[] getWeekendDays(HolidayRegion region)
         {
             switch (region)
             {
-                case HolydayRegion.SolarHijri:
+                case HolidayRegion.SolarHijri:
                     return [DayOfWeek.Thursday, DayOfWeek.Friday,];
-                case HolydayRegion.LunarHijri:
+                case HolidayRegion.LunarHijri:
                     return [DayOfWeek.Friday, DayOfWeek.Saturday];
                 default:
                     return [DayOfWeek.Saturday, DayOfWeek.Sunday];
