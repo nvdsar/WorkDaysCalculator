@@ -53,11 +53,4 @@ namespace WorkDaysCalculator
             new ("11/26", HolydayRegion.Victoria ),
         };
     }
-
-    public enum HolydayRegion
-    {
-        SolarHijri = 0,
-        LunarHijri = 1,
-        Victoria = 2,
-    }
 }
