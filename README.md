@@ -1,5 +1,33 @@
-I created this repo to answer the need for calculating working days between two specific date times.
-The WorkingDayCalculator project is the heart of the repository, it has several classes.
-1- HolydayRegions is an enum indicating Holyday types, whereas it can be SolarHijri, LunarHijri, and Any other cultural holiday, for example, Victoria.
-2- The Days in the Holiday Static class, indicate the Holidays for each Region.
-3- The calculator class provides the solution for the calculation of Working days between dates
+# Working Days Calculator
+
+Working Days Calculator is a .NET library that calculates the number of working days between two different date and time points. It is customized for calculating Iranian working days.
+
+## Installation
+
+Use the package manager [Nuget](https://www.nuget.org/packages/) to install WorkingDaysCalculator.
+
+```bash
+dotnet add package Newtonsoft.Json
+```
+
+## Usage
+
+``` c#
+using WorkDaysCalculator;
+
+var from = new DateTime(2024, 06, 01);
+var to = DateTime.Now;
+var count = new Calculator().GetWorkDaysCount(from, to, HolidayRegion.SolarHijri, HolidayRegion.LunarHijri);
+
+```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
