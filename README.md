@@ -7,7 +7,7 @@ Working Days Calculator is a .NET library that calculates the number of working 
 Use the package manager [Nuget](https://www.nuget.org/packages/) to install WorkingDaysCalculator.
 
 ```bash
-dotnet add package Newtonsoft.Json
+dotnet add package WorkingDaysCalculator
 ```
 
 ## Usage
