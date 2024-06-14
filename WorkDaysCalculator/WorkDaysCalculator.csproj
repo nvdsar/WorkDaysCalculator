@@ -16,9 +16,10 @@
     <Copyright>2024</Copyright>
     <PackageTags>Worktime;WorkingDate;Project Management;Working Day Calculation; IranWorkTime; Iran Time;WorkingHours; Date;</PackageTags>
     <PackageReleaseNotes>Added readme.Md and documentation comments</PackageReleaseNotes>
-    <AssemblyVersion>1.0.0.1</AssemblyVersion>
-    <FileVersion>1.0.0.1</FileVersion>
     <PackageReadmeFile>.\README.md</PackageReadmeFile>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+    <FileVersion>1.0.1</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
