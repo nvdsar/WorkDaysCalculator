@@ -15,10 +15,10 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Copyright>2024</Copyright>
     <PackageTags>Worktime;WorkingDate;Project Management;Working Day Calculation; IranWorkTime; Iran Time;WorkingHours; Date;</PackageTags>
-    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <PackageReleaseNotes>Added readme.Md and documentation comments</PackageReleaseNotes>
     <AssemblyVersion>1.0.0.1</AssemblyVersion>
     <FileVersion>1.0.0.1</FileVersion>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReadmeFile>.\README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +26,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>.</PackagePath>
+    </None>
     <None Include="Workday Calculator.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
@@ -35,11 +39,7 @@
   <ItemGroup>
     <None Update="README.md">
       <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Update="Working Days Calculator.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
+      <PackagePath>.</PackagePath>
     </None>
   </ItemGroup>
 
