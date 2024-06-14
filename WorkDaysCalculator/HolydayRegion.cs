@@ -7,6 +7,6 @@
     {
         SolarHijri = 0,
         LunarHijri = 1,
-        Victoria = 2,
+        USA = 2,
     }
 }

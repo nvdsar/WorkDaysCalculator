@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFrameworks>net8.0;net7.0;net6.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <ApplicationIcon>Workday Calculator.ico</ApplicationIcon>
@@ -14,8 +14,11 @@
     <PackageId>WorkingDaysCalculator</PackageId>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Copyright>2024</Copyright>
-    <PackageTags>Worktime;WorkingDate;Project Management;Working Day Calculation; IranWorkTime; Iran Time;</PackageTags>
+    <PackageTags>Worktime;WorkingDate;Project Management;Working Day Calculation; IranWorkTime; Iran Time;WorkingHours; Date;</PackageTags>
     <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,6 +27,17 @@
 
   <ItemGroup>
     <None Include="Workday Calculator.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="Working Days Calculator.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>

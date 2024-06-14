@@ -6,7 +6,7 @@ namespace WorkDaysCalculator
     {
         CultureInfo PersianCulture = new CultureInfo("fa-Ir");
         CultureInfo ArabicCulture = new CultureInfo("ar-SA");
-        CultureInfo AustralianCulture = new CultureInfo("en-au");
+        CultureInfo AmericanCulture = new CultureInfo("en-US");
         public List<DateTime> GetWorkDays(DateTime from, DateTime to, params HolidayRegion[] regions)
         {
             if (to < from)
@@ -23,7 +23,7 @@ namespace WorkDaysCalculator
                     continue;
                 if (skip(HolidayRegion.LunarHijri, ArabicCulture))
                     continue;
-                if (skip(HolidayRegion.Victoria, AustralianCulture))
+                if (skip(HolidayRegion.USA, AmericanCulture))
                     continue;
                 overAllDates.Add(f.Date);
 
@@ -53,11 +53,11 @@ namespace WorkDaysCalculator
             switch (region)
             {
                 case HolidayRegion.SolarHijri:
-                    return [DayOfWeek.Thursday, DayOfWeek.Friday,];
+                    return new DayOfWeek[] { DayOfWeek.Thursday, DayOfWeek.Friday, };
                 case HolidayRegion.LunarHijri:
-                    return [DayOfWeek.Friday, DayOfWeek.Saturday];
+                    return new DayOfWeek[] { DayOfWeek.Friday, DayOfWeek.Saturday };
                 default:
-                    return [DayOfWeek.Saturday, DayOfWeek.Sunday];
+                    return new DayOfWeek[] { DayOfWeek.Saturday, DayOfWeek.Sunday };
             }
         }
     }
