@@ -1,5 +1,8 @@
 ﻿namespace WorkDaysCalculator
 {
+    /// <summary>
+    /// Indicates the type of region for holidays
+    /// </summary>
     public enum HolidayRegion
     {
         SolarHijri = 0,

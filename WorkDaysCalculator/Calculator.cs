@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Globalization;
 
 namespace WorkDaysCalculator
 {
@@ -16,7 +10,7 @@ namespace WorkDaysCalculator
         public List<DateTime> GetWorkDays(DateTime from, DateTime to, params HolidayRegion[] regions)
         {
             if (to < from)
-                throw new InvalidDataException();
+                throw new InvalidDataException("The date indicating as \'To\' should be bigger (aka later) than \'From\'");
 
             var overAllDates = new List<DateTime>();
 

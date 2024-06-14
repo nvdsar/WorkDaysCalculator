@@ -1,12 +1,18 @@
-﻿using WorkDaysCalculator;
-
-namespace WorkDaysCalculator
+﻿namespace WorkDaysCalculator
 {
-    public record Holiday(string Date, HolidayRegion Region);
+    /// <summary>
+    /// References a Holiday in a specific region
+    /// </summary>
+    /// <param name="Date">string indicator of a date by the format of MM/dd</param>
+    /// <param name="Region">Based on <see cref="HolidayRegion"/> which indicates the type of region for the holiday</param>
+    internal record Holiday(string Date, HolidayRegion Region);
 
-    public static class Holidays
+    internal static class Holidays
     {
-        public static List<Holiday> Days = new List<Holiday>()
+        /// <summary>
+        /// I list of holidays for all regions
+        /// </summary>
+        internal static List<Holiday> Days = new List<Holiday>()
         {
             new ("01/01", HolidayRegion.SolarHijri),
             new ("01/02", HolidayRegion.SolarHijri ),
