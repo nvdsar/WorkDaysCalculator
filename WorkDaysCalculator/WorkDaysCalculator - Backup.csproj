@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net7.0;net6.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationIcon>Workday Calculator.ico</ApplicationIcon>
+    <Title>Work Day Calculator</Title>
+    <Authors>Navid Sargheiny, Majid Dejpour</Authors>
+    <Company></Company>
+    <Description>This project has been created to calculate the number of working days between two different date and time points. Customized for calculating Iranian working days</Description>
+    <PackageIcon>Workday Calculator.png</PackageIcon>
+    <RepositoryUrl>https://github.com/nvdsar/WorkDaysCalculator</RepositoryUrl>
+    <PackageId>WorkingDaysCalculator</PackageId>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>2024</Copyright>
+    <PackageTags>Worktime;WorkingDate;Project Management;Working Day Calculation; IranWorkTime; Iran Time;WorkingHours; Date;</PackageTags>
+    <PackageReleaseNotes>Added readme.Md and documentation comments</PackageReleaseNotes>
+    <PackageReadmeFile>.\README.md</PackageReadmeFile>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Workday Calculator.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>.</PackagePath>
+    </None>
+    <None Include="Workday Calculator.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>.</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
