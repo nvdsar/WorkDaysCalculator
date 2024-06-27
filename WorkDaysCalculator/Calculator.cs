@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using Quicksilver.PersianDate;
+using System.Globalization;
 
 namespace WorkDaysCalculator
 {
@@ -7,6 +8,12 @@ namespace WorkDaysCalculator
         CultureInfo PersianCulture = new CultureInfo("fa-Ir");
         CultureInfo ArabicCulture = new CultureInfo("ar-SA");
         CultureInfo AmericanCulture = new CultureInfo("en-US");
+        public List<DateTime> GetWorkDays(string solarHijriFrom, string solarHijriTo, params HolidayRegion[] regions)
+        {
+            var from = solarHijriFrom.ToGregorianDate();
+            var to = solarHijriTo.ToGregorianDate();
+            return GetWorkDays(from, to, regions);
+        }
         public List<DateTime> GetWorkDays(DateTime from, DateTime to, params HolidayRegion[] regions)
         {
             if (to < from)
@@ -42,6 +49,11 @@ namespace WorkDaysCalculator
             var workDays = overAllDates.Where(x => weekendDays.Contains(x.DayOfWeek) == false).ToList();
 
             return workDays;
+        }
+        public int GetWorkDaysCount(string solarHijriFrom, string solarHijriTo, params HolidayRegion[] regions)
+        {
+            var workDays = GetWorkDays(solarHijriFrom, solarHijriTo, regions);
+            return workDays.Count;
         }
         public int GetWorkDaysCount(DateTime from, DateTime to, params HolidayRegion[] regions)
         {
