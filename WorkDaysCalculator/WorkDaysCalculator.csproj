@@ -17,9 +17,9 @@
     <PackageTags>Worktime;WorkingDate;Project Management;Working Day Calculation; IranWorkTime; Iran Time;WorkingHours; Date;</PackageTags>
     <PackageReleaseNotes>Added readme.Md and documentation comments</PackageReleaseNotes>
     <PackageReadmeFile>.\README.md</PackageReadmeFile>
-    <Version>1.0.1</Version>
-    <AssemblyVersion>1.0.1</AssemblyVersion>
-    <FileVersion>1.0.1</FileVersion>
+    <Version>1.1.0</Version>
+    <AssemblyVersion>1.1.0</AssemblyVersion>
+    <FileVersion>1.1.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -35,6 +35,10 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Quicksilver.PersianDate" Version="1.0.0" />
   </ItemGroup>
 
 	<ItemGroup>
